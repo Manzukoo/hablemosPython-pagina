@@ -13,6 +13,10 @@
 
 body {
     background-color: #132e45;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 
@@ -22,6 +26,11 @@ MAIN
 ----
 PRESENTATION
 */
+
+main{
+    z-index: 10;
+    flex: 1 0 auto;
+}
 
 .container {
     display: flex;
@@ -133,4 +142,27 @@ PRESENTATION
 
 /*
 END PRESENTATION
+*/
+
+
+
+/*
+FOOTER
+*/
+
+footer {
+    flex: 0 0 auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container .text span{
+    color: #fdc130;
+}
+
+/*
+END FOOTER
 */
