@@ -1,9 +1,136 @@
-*, *::after, *::before{
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    color: white;
+    font-style: normal;
 }
-body{
+
+* {
+    font-family: 'Open Sans';
+}
+
+body {
     background-color: #132e45;
 }
+
+
+
+/*
+MAIN
+----
+PRESENTATION
+*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5em;
+}
+.presentation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.presentation .title {
+    text-shadow: 2px 2px 8px #000;
+    font-size: 3em;
+}
+
+.presentation .title span {
+    color: #fdc130;
+}
+
+.presentation .terms a {
+    color: #fdc130;
+}
+
+.presentation .description {
+    margin-top: 1em;
+    border-left: solid #fff;
+    padding-left: 5px;
+}
+
+.presentation .btns {
+    margin-top: 1.2em;
+}
+
+.btn-big {
+    display: flex;
+}
+
+.btn-small {
+    margin-top: .5em;
+    display: flex;
+}
+
+.btn-small .btn:first-of-type {
+    margin-right: .5em;
+}
+
+.btn {
+    padding: 5px;
+    border-radius: 5%;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px;
+    transition: background-color .5s, color .5s, padding .5s;
+}
+
+.btn:hover{
+    padding: 8px;
+    color: #000;
+    background-color: white;
+}
+
+.btn:active{
+    color: #000;
+    background-color: rgb(211, 211, 211);
+    animation: btn_active infinite .8s alternate;
+}
+
+@keyframes btn_active {
+    to {
+        padding: 12px;
+    }
+}
+
+.btn-filled {
+    color: #000;
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 1.3em;
+}
+
+.btn-filled:hover {
+    background-color: rgb(211, 211, 211);
+    padding: 6.5px 12.5px;
+}
+
+.btn-filled .fab::before {
+    color: #000;
+    font-size: 1.3em;
+}
+
+.btn-outline {
+    border: 1px solid white;
+}
+
+.btn-outline .fab::before {
+    transition: color .5s;
+}
+
+.btn-outline:hover .fab::before {
+    color: #000;
+}
+
+/*
+END PRESENTATION
+*/
